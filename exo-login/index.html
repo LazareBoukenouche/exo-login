@@ -19,19 +19,26 @@
     <main>
       <h1>Connexion</h1>
       <form>
+
         <div class="input-group">
           <label for="username">Nom d'utilisateur</label>
-          <input id="username" name="username" />
+          <input id="username" name="username" required/>
+          <span class="validity"></span>
           <div class="error-username"></div>
         </div>
+
         <div class="input-group">
           <label for="password">Mot de passe</label>
-          <input id="password" name="password" type="password" />
+          <input id="password" name="password" type="password" required/>
+          <span class="validity"></span>
+
           <div class="checkbox-group">
             <input
               id="toggle-password-visibility"
               name="toggle-password-visibility"
               type="checkbox"
+              onclick="displayPassword()"
+              
             />
             <label for="toggle-password-visibility">
               montrer le mot de passe
@@ -39,7 +46,9 @@
           </div>
           <div class="error-password"></div>
         </div>
+
         <button type="submit">Se connecter</button>
+
       </form>
     </main>
     <script src="main.js"></script>
